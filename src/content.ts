@@ -72,7 +72,7 @@ export const projects = [
     id: "01",
     name: "Alpha Brief",
     url: "https://alpha-brief.vercel.app/",
-    blurb: "Markets-based website that gives you a watchlist, macro timeline, and summarized market news in one place so you can get the key signal fast..",
+    blurb: "Markets-based website that gives you a watchlist, macro timeline, and summarized market news in one place so you can get the key signal fast.",
     date: "March 2026 - Present",
   },
   {
