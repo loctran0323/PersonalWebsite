@@ -3,7 +3,7 @@ export const site = {
   title: "",
   location: "",
   tagline:
-    "Operations Research and Financial Engineering Student",
+    "Operations Research and Financial Engineering Student at Princeton",
   bio: "I'm a sophomore at Princeton University, interested in financial markets, technology, and businesses.",
   resumeUrl: "https://drive.google.com/file/d/1Y1x_htXwLTErWvscEYjuS2JPn2QJ443k/view?usp=sharing",
   email: "loctran@princeton.edu",
