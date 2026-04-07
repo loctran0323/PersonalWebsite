@@ -89,6 +89,9 @@ function App() {
                       <img
                         src={job.logo}
                         alt=""
+                        loading="lazy"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
                         className="mt-0.5 h-11 w-11 shrink-0 rounded-md border border-[var(--color-border)] bg-white object-contain p-1"
                       />
                     ) : null}
@@ -156,6 +159,9 @@ function App() {
                     <img
                       src={edu.logo}
                       alt=""
+                      loading="lazy"
+                      decoding="async"
+                      referrerPolicy="no-referrer"
                       className="mt-0.5 h-11 w-11 shrink-0 rounded-md border border-[var(--color-border)] bg-white object-contain p-1"
                     />
                   ) : null}

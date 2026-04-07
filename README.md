@@ -34,3 +34,13 @@ Logo files go in **`public/logos/`** and use paths like `/logos/example.png` in 
 ## Deploy
 
 Configured for **[Vercel](https://vercel.com/)** (or any static host): build command `npm run build`, output directory `dist`.
+
+Response headers (HSTS, CSP, etc.) are set in **`vercel.json`**.
+
+### Chrome shows “Dangerous site”
+
+That comes from **Google Safe Browsing**, not from a normal code bug. New or rarely visited domains are sometimes flagged by mistake.
+
+1. Check status: [Google Safe Browsing transparency](https://transparencyreport.google.com/safe-browsing/search).
+2. If it’s wrong, file a review: [Report a Safe Browsing error](https://safebrowsing.google.com/safebrowsing/report_error/).
+3. Prefer **real logos** in `public/logos/` instead of random hotlinked images (search thumbnails, random CDNs), which look untrustworthy to users and crawlers.
