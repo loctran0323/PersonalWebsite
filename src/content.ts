@@ -27,6 +27,7 @@ export type Experience = {
 export const experiences: Experience[] = [
   {
     id: "01",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQGidLYgsI0R5Q/company-logo_200_200/company-logo_200_200/0/1721299937776/mirae_asset_securities_usa_inc__logo?e=2147483647&v=beta&t=K4YzK0aKyMIM_yuv_H2Jfnl6NGJ8n5E-cUY96l_pYM0",
     role: "Incoming Global Markets Summer Analyst",
     company: "Mirae Asset Securities",
     period: "May 2026 – July 2026",
@@ -50,6 +51,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "04",
+    logo: "https://s3-media0.fl.yelpcdn.com/bphoto/8KU_rQoZVj2kI0sHO3kOUQ/l.jpg",
     role: "Bank Teller",
     company: "Valley Strong Credit Union",
     period: "August 2022 – June 2024",
@@ -57,6 +59,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "05",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS7r0NaeEwZBMD6kg5Myz2QjCxUADYcA0z3Q&s",
     role: "Certified Tax Preparer (VITA)",
     company: "Kings Community Action Organization",
     period: "December 2021 – April 2024",
