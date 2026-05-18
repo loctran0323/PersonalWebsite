@@ -163,20 +163,20 @@ export const projects: Project[] = [
   // },
   {
     id: "01",
+    name: "Bart",
+    url: "https://studywithbart.com",
+    blurb: "The smartest way to study — drop in your lectures, notes, and problem sets and Bart returns a personalized study packet in ten minutes: lesson plan, schematics, memory aids, and practice exams, every line cited back to your own materials.",
+    date: "May 2026 – Present",
+    accent: "forest",
+  },
+  {
+    id: "02",
     name: "AlphaBrief",
     url: "https://alphabrief.net",
     blurb: "Solo-built full-stack Next.js 15 platform for market intelligence and stock research — earnings calendar, sentiment, treemap, watchlists, price alerts.",
     date: "Mar 2026 – Present",
     stack: ["Next.js", "TypeScript", "Supabase", "Stripe", "Vercel"],
     accent: "amber",
-  },
-  {
-    id: "02",
-    name: "Bart",
-    url: "https://studywithbart.com",
-    blurb: "The smartest way to study — drop in your lectures, notes, and problem sets and Bart returns a personalized study packet in ten minutes: lesson plan, schematics, memory aids, and practice exams, every line cited back to your own materials.",
-    date: "May 2026 – Present",
-    accent: "forest",
   },
   {
     id: "03",
