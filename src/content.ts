@@ -75,12 +75,12 @@ export const experiences: Experience[] = [
     company: "Lambent Data",
     location: "Princeton, NJ",
     period: "Apr 2026 – Jun 2026",
-    detail: "Leading a team of 6 building AI infrastructure for Vantage, Lambent's behavioral health platform.",
+    detail: "Lead engineer on \"Building the Brain,\" the rules engine for VAIntage Pathways across 80+ MAT clinics.",
     tags: ["AI", "Product", "Healthcare"],
     details: [
-      "Leading a team of 6 to build AI-powered infrastructure for Vantage, Lambent Data's behavioral health platform focused on billing accuracy, revenue-cycle workflows, and patient follow-up.",
-      "Supporting development of secure, real-time EHR overlay tools that help providers catch coding errors and act on clinical workflow risks faster.",
-      "Standardizing intern and contractor onboarding across Azure, GitHub, Vanta, and Cursor AI to support HIPAA-conscious product development.",
+      "Lead engineer on \"Building the Brain,\" the rules engine for VAIntage Pathways, an AI overlay deploying to 80+ Medication-Assisted Treatment clinics, using Python scrapers (BeautifulSoup, Selenium) that pull billing rules from ~15 federal and Florida sources into JSON for sub-200ms point-of-care checks that prevent costly denials.",
+      "Build \"diff\" validation logic to catch rule changes between scraped and live matrices, then containerize scrapers as scheduled Azure Functions to keep the rules engine current without triggering clinician alert fatigue.",
+      "Lead onboarding for a 5-person intern cohort across Azure DevOps, Cursor AI, GitHub, and Vanta within a Zero Trust, HIPAA-compliant sandbox ensuring zero PHI leaves the clinical environment.",
     ],
   },
   {
@@ -163,6 +163,14 @@ export const projects: Project[] = [
   // },
   {
     id: "01",
+    name: "Conifer",
+    url: "https://conifer.build/",
+    blurb: "An operating system for local AI — automates setup, storage, memory, and hardware optimization so developers can run model inference privately on consumer devices, distributing workloads across CPU, GPU, and accelerators in a unified memory space.",
+    date: "May 2026 – Present",
+    accent: "ink",
+  },
+  {
+    id: "02",
     name: "Bart",
     url: "https://studywithbart.com",
     blurb: "The smartest way to study — drop in your lectures, notes, and problem sets and Bart returns a personalized study packet in ten minutes: lesson plan, schematics, memory aids, and practice exams, every line cited back to your own materials.",
@@ -170,7 +178,7 @@ export const projects: Project[] = [
     accent: "forest",
   },
   {
-    id: "02",
+    id: "03",
     name: "AlphaBrief",
     url: "https://alphabrief.net",
     blurb: "Solo-built full-stack Next.js 15 platform for market intelligence and stock research — earnings calendar, sentiment, treemap, watchlists, price alerts.",
@@ -179,7 +187,7 @@ export const projects: Project[] = [
     accent: "amber",
   },
   {
-    id: "03",
+    id: "04",
     name: "MarketsAndMergers",
     url: "https://marketsandmergers.blogspot.com/",
     blurb: "Personal finance blog covering market news, M&A activity, and macroeconomic trends — read by 10.5K+ people.",
