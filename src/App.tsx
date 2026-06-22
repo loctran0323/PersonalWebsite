@@ -239,26 +239,17 @@ function ExperienceRow({ exp }: { exp: Experience }) {
   );
 }
 
-/* ── education row (collapsed → expandable courses) ───── */
+/* ── education row (courses always listed, low-key) ───── */
 function EducationRow({ edu }: { edu: Education }) {
-  const [open, setOpen] = useState(false);
   const hasCourses = !!(edu.courses && edu.courses.length > 0);
   const total = edu.courses?.reduce((n, t) => n + t.items.length, 0) ?? 0;
 
   return (
-    <button
-      type="button"
-      className="row edu-row-btn"
-      aria-expanded={open}
-      onClick={() => hasCourses && setOpen((v) => !v)}
-    >
+    <div className="row edu-row">
       <div className="row-head">
         <span className="row-idx">{edu.id}</span>
         <div className="row-main">
-          <span className="row-title">
-            {hasCourses && <span className="chev">›</span>}
-            {edu.school}
-          </span>
+          <span className="row-title">{edu.school}</span>
           <span className="row-sub">
             <span className="company">{edu.degree}</span>
             <span className="row-sub-sep"> · {edu.years}</span>
@@ -266,7 +257,7 @@ function EducationRow({ edu }: { edu: Education }) {
           {edu.detail && <span className="row-meta">{edu.detail}</span>}
         </div>
       </div>
-      {open && hasCourses && (
+      {hasCourses && (
         <div className="courses">
           <div className="courses-meta">
             {total} courses across {edu.courses!.length} terms
@@ -286,7 +277,7 @@ function EducationRow({ edu }: { edu: Education }) {
           ))}
         </div>
       )}
-    </button>
+    </div>
   );
 }
 
