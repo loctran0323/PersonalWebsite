@@ -760,6 +760,104 @@ button.row[aria-expanded="true"] .chev {
   white-space: nowrap;
 }
 
+/* ── quotes ──────────────────────────────────────────── */
+.quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  align-items: center;
+  padding: 48px 0 24px;
+}
+
+/* thin hairline rule between consecutive quotes */
+.quote + .quote::before {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 1px;
+  margin: 0 auto 56px;
+  background: linear-gradient(90deg, transparent, var(--rule) 35%, var(--rule) 65%, transparent);
+}
+
+.quote {
+  margin: 0;
+  max-width: 640px;
+  text-align: center;
+  position: relative;
+  padding: 26px 8px;
+  opacity: 0;
+  transform: translateY(14px);
+  animation: quote-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--i, 0) * 0.12s + 0.05s);
+}
+
+/* small inline quote marks wrapping the text */
+.quote-mark {
+  color: var(--accent);
+  font-size: 0.7em;
+  font-style: normal;
+  opacity: 0.85;
+  vertical-align: 0.05em;
+}
+
+.quote-mark:first-child {
+  margin-right: 0.12em;
+}
+
+.quote-mark:last-child {
+  margin-left: 0.12em;
+}
+
+.quote-text {
+  margin: 0;
+  position: relative;
+  color: var(--ink);
+  font-size: clamp(19px, 3.4vw, 30px);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  font-style: italic;
+  text-wrap: balance;
+}
+
+/* thin accent rule under the quote */
+.quote-cite {
+  margin-top: 22px;
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quote-dash {
+  color: var(--accent);
+}
+
+.quote-author {
+  color: var(--muted);
+}
+
+.quote-source {
+  color: var(--rule);
+}
+
+@keyframes quote-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quote {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
 /* ── footer ───────────────────────────────────────────── */
 .footer {
   margin-top: 80px;

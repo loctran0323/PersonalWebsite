@@ -8,13 +8,14 @@ import {
   education,
   skillGroups,
   certifications,
+  quotes,
   type Experience,
   type Education,
 } from "./content";
 
-type Page = "home" | "experience" | "projects" | "leadership" | "education" | "skills";
+type Page = "home" | "experience" | "projects" | "leadership" | "education" | "skills" | "quotes";
 
-const PAGES: Page[] = ["experience", "projects", "leadership", "education", "skills"];
+const PAGES: Page[] = ["experience", "projects", "leadership", "education", "skills", "quotes"];
 
 function readHash(): Page {
   if (typeof window === "undefined") return "home";
@@ -187,6 +188,33 @@ function Subpage({ page, go }: { page: Page; go: (p: Page) => void }) {
             </div>
           ))}
         </>
+      )}
+
+      {page === "quotes" && (
+        <div className="quotes">
+          {quotes.map((q, i) => (
+            <figure key={q.id} className="quote" style={{ "--i": i } as React.CSSProperties}>
+              <blockquote className="quote-text">
+                <span className="quote-mark" aria-hidden="true">
+                  &ldquo;
+                </span>
+                {q.text}
+                <span className="quote-mark" aria-hidden="true">
+                  &rdquo;
+                </span>
+              </blockquote>
+              {(q.author || q.source) && (
+                <figcaption className="quote-cite">
+                  <span className="quote-dash" aria-hidden="true">
+                    —
+                  </span>
+                  {q.author && <span className="quote-author">{q.author}</span>}
+                  {q.source && <span className="quote-source"> · {q.source}</span>}
+                </figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
       )}
     </main>
   );

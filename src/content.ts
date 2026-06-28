@@ -341,6 +341,33 @@ export const education: Education[] = [
   },
 ];
 
+export type Quote = {
+  id: string;
+  text: string;
+  author: string;
+  source?: string;
+};
+
+export const quotes: Quote[] = [
+  // ─── TEMPLATE: copy this block, fill in fields ───
+  // {
+  //   id: "00",
+  //   text: "The quote itself goes here.",
+  //   author: "Who said it",
+  //   source: "Where it's from",   // optional
+  // },
+  {
+    id: "01",
+    text: "Icarus laughed as he fell, for he knew to fall means to once have soared.",
+    author: "",
+  },
+  {
+    id: "02",
+    text: "The best time to plant a tree was 20 years ago; the second best time is now.",
+    author: "",
+  },
+];
+
 export type SkillGroup = { title: string; items: string[] };
 
 export const skillGroups: SkillGroup[] = [
